@@ -1,0 +1,56 @@
+# 함수 / paramaters(매개변수)
+def say_hello(user_name, user_age):
+    print("hello", user_name)
+    print("you're", user_age, "years old")
+
+say_hello("Garden", 0) # 실제로 전달할 데이터 Garden -> arguments(인수)
+
+
+# Defult Paramaters
+def say_hello(user_name = "anonymous"):
+    print("hello", user_name)
+
+say_hello()
+
+
+# 리턴: return 함수 바깥으로 값을 보냄
+def tax_calc(money):
+    return money * 0.35
+
+def pay_tax(tax):
+    print("Thank you for paying", tax)
+
+pay_tax(tax_calc(15000000))
+
+
+
+# 계산기
+def plus(a, b):
+    print(a + b)
+
+def minus(a, b):
+    print(a - b)
+
+def multiple(a, b):
+    print(a * b)
+
+def divid(a, b):
+    print(a / b)
+
+def pow(a, b):
+    print(a ** b)
+
+plus(1,2)
+print()
+
+minus(2,1)
+print()
+
+multiple(1,1)
+print()
+
+divid(6,2)
+print()
+
+pow(2,2)
+print()
