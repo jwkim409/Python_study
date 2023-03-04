@@ -54,3 +54,70 @@ print()
 
 pow(2,2)
 print()
+
+
+# 변수를 포함한 string 만드는 법
+# f""로 문자열을 표현하면 변수를 표현할 수 있다. (변수는 변수명을 중괄호({ })로 나타낸다)
+my_name = "kim"
+my_age = 0
+my_hair_color = "black"
+
+print(f"Hello I'm {my_name}, I have {my_age} years in the earth, {my_hair_color} is my hair color.")
+
+def make_juice(fruit):
+    return f"{fruit}+ cup "
+
+def add_ice(juice):
+    return f"{juice}+ ice "
+
+def add_sugar(iced_juice):
+    return f"{iced_juice}+ sugar"
+
+juice = make_juice("apple ")
+cold_juice = add_ice(juice)
+perfect_juice = add_sugar(cold_juice)
+
+print(perfect_juice)
+
+# if 조건문
+a = 10
+if a == 10:
+    print("Correct")
+
+# if else
+password_correct = True
+
+if password_correct:
+    print("Here is your money")
+else:
+    print("Wrong password")
+
+# elif
+winner = 10
+
+if winner > 10:
+    print("Winner is grater than 10")
+elif winner < 10:
+    print("Winner is less than 10")
+elif winner != 10:
+    print("Winner is not 10")
+else:
+    print("Winner is 10")
+
+# input : 사용자에게 질문이 표시되는 function(1개의 argument만 가능)
+age = int(input("How old are you?"))
+
+print("user answer", age)
+
+# type : variable의 type을 알려주는 function
+print(type(age))
+
+# and, or
+if age < 18:
+    print("You can't drink.")
+elif age >= 18 and age <= 35:
+    print("You drink beer.")
+elif age == 60 or age == 70:
+    print("Birthday party!")
+else:
+    print("You can drink all.")
