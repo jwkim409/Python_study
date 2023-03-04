@@ -121,3 +121,45 @@ elif age == 60 or age == 70:
     print("Birthday party!")
 else:
     print("You can drink all.")
+    
+    
+""" 쌍따음표 3개 위아래로 주면 주석
+# 파이썬 표준 라이브러리 import
+from random import randint  # from이 모듈에서 이 함수를 import 해줘
+
+user_choice = int(input("Choose number."))
+pc_choice = randint(0, 50)  # 이걸 import 했어
+
+if user_choice == pc_choice:
+    print("You Won!")
+elif user_choice > pc_choice:
+    print("Lower! Computer chose", pc_choice)
+elif user_choice < pc_choice:
+    print("Higher! Computer chose", pc_choice)
+"""
+
+# while 반복문 / if는 한 번만 while은 반복
+distance = 0
+
+while distance <= 20:
+    print("I'm running", distance, "km")
+    distance = distance + 1
+
+
+# 파이썬 도박(유저가 이길 때까지 반복)
+from random import randint  # from이 모듈에서 이 함수를 import 해줘
+
+print("Welcome to Python Casino.")
+pc_choice = randint(0, 50)  # 이걸 import 했어
+
+playing = True
+
+while playing:
+    user_choice = int(input("Choose number (0-50)"))
+    if user_choice == pc_choice:
+        print("You Won!")
+        playing = False  # 유저가 이기면 게임 끝
+    elif user_choice > pc_choice:
+        print("Lower!")
+    elif user_choice < pc_choice:
+        print("Higher!")
