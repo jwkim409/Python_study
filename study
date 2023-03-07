@@ -247,3 +247,41 @@ print(player['friend']['fav_food'])
 player['fav_food'] = "pocari"
 player['friend']['fav_food'] = "pocari"
 print(player)
+
+"""----------------------------------------"""     
+# 사이트 접근 확인 코드 설계
+
+# pypi에서 requests 2.28.2 설치 후 import
+from requests import get
+
+# For 반복문
+# 튜블이나 리스트 만들 때는 복수형 (관습)
+websites = (
+    "https://google.com",
+    "airbnb.com",
+    "twitter.com",
+    "https://naver.com"
+)
+
+# 딕셔너리, reponse(200)를 받게 되면 이 딕셔너리에 추가됨
+results = {}
+
+"""
+# for 변수 in 집합체
+for website in websites:
+    print("hello", website)
+# 첫 번째 싸이클에서는 website에 구글, 두 번째에서는 에어비앤비 ... 반복
+"""
+
+# 사이트 주소가 https://로 시작하면 바로 이동, 아니면 https를 붙여줌
+for website in websites:
+    if not website.startswith("https://"):
+        website = f"https://{website}"
+    response = get(website)  # get 함수는 reponse(웹사이트 응답)를 리턴해줌. 리턴 값은 함수가 어떤 작업을 수행하고 어떤 값을 돌려주는 것
+  # print(response.status_code)  # if문 다음에 실행되니까 이 위치에  # status_code -> 200만 보여줘
+    if response.status_code == 200:
+        results[website] = "OK"
+    else:
+        results[website] = "FAILED"
+
+print(results)
