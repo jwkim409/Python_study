@@ -6,7 +6,7 @@ def say_hello(user_name, user_age):
 say_hello("Garden", 0) # 실제로 전달할 데이터 Garden -> arguments(인수)
 
 
-# Defult Paramaters
+# Defult Paramaters 파라미터 기본값
 def say_hello(user_name = "anonymous"):
     print("hello", user_name)
 
@@ -78,6 +78,8 @@ cold_juice = add_ice(juice)
 perfect_juice = add_sugar(cold_juice)
 
 print(perfect_juice)
+
+"""----------------------------------------"""    
 
 # if 조건문
 a = 10
@@ -164,7 +166,8 @@ while playing:
     elif user_choice < pc_choice:
         print("Higher!")
         
-        
+"""----------------------------------------"""     
+
 # 자료구조(data structure)를 사용하여 데이터 구조화 알아보기
 # list, tuple, dictionary
 
@@ -198,3 +201,49 @@ days_of_week.remove("Fri")
 print(days_of_week)
 
 print(days_of_week[3])
+
+
+# Tuples
+# 리스트는 [ ]으로 튜플은 ( )으로 
+# [리스트]는 그 값의 생성, 삭제, 수정이 가능하지만, (튜플)은 그 값을 바꿀 수 X
+days = ("Mon", "Tue", "Wed")
+print(days[-1])
+
+
+#Dicts 딕셔너리 -> 튜플도, 다른 딕셔너리도 담을 수 있음
+player = {
+    'name': 'kim',
+    'age' : 0,
+    'alive' : True,
+    'fav_food' : ["apple", "cherry"],
+    'friend' : {
+        'name' : "Jung",
+        "fav_food" : ("ice-cream")  # 소괄호는 튜플
+    }
+}
+"""
+print(player.get('age'))
+print(player.get('fav_food'))
+print(player['fav_food'])
+"""
+# 딕셔너리 내용 삭제
+player.pop('age')
+print(player)
+
+# 딕셔너리 내용 추가
+player['xp'] = 1500
+print(player)
+
+# 딕셔너리 중 리스트에 내용 추가
+player['fav_food'].append("noodle")
+print(player.get('fav_food'))
+print(player['fav_food'])
+
+# 친구 
+print(player['friend'])
+print(player['friend']['fav_food'])
+
+# 데이터 업데이트
+player['fav_food'] = "pocari"
+player['friend']['fav_food'] = "pocari"
+print(player)
