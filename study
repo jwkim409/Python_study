@@ -249,6 +249,7 @@ player['friend']['fav_food'] = "pocari"
 print(player)
 
 """----------------------------------------"""     
+
 # 사이트 접근 확인 코드 설계
 
 # pypi에서 requests 2.28.2 설치 후 import
