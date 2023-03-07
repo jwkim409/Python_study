@@ -163,3 +163,38 @@ while playing:
         print("Lower!")
     elif user_choice < pc_choice:
         print("Higher!")
+        
+        
+# 자료구조(data structure)를 사용하여 데이터 구조화 알아보기
+# list, tuple, dictionary
+
+# Method
+# method.functuin()   함수만 호출할 수는 X
+# 내부에 있는 function들은 function이라고 하지 않고 method이라고 한다.
+# -> 함수가 데이터와 결합되어 있다면 메소드, 아니면 함수
+# name 메소드는 데이터를 변환해줌
+name = "kim"
+print(name.startswith("k"))  # name 변수 안에 startswith라는 method가 있음.
+
+이름 = "kim"
+print(이름.replace("m", "ck"))
+
+kim = "kim"
+print(kim.endswith("m"))
+
+
+# list는 변수 한 개만 가능
+days_of_week = ["Mon", "Tue", "Wed", "Thur", "Fri"]
+# print(days_of_week.count("Wed"))
+
+# days_of_week.clear()
+
+days_of_week.append("Sat")
+print(days_of_week)
+days_of_week.append("Sun")
+print(days_of_week)
+
+days_of_week.remove("Fri")
+print(days_of_week)
+
+print(days_of_week[3])
