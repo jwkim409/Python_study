@@ -252,7 +252,7 @@ print(player)
 
 # 사이트 접근 확인 코드 설계
 
-# pypi에서 requests 2.28.2 설치 후 import
+# pypi에서 requests 2.28.2 설치 후 import (requests -> 웹사이트 호출을 쉽게 도와줌)
 from requests import get
 
 # For 반복문
