@@ -11,8 +11,10 @@ if respons.status_code != 200:
     print("Can't request website")
 else:
     soup = BeautifulSoup(respons.text, 'html.parser') # beautifulsoup에게 html을 보내줌
-    jod = soup.find_all('section', class_="jobs")  # 주의) class_ 언더바 기재
-
+    jobs = soup.find_all('section', class_="jobs")  # 주의) class_ 언더바 기재
+    # print(len(jobs))  # len: 리스트나 튜플의 크기를 줌
+    for job_section in jobs:
+        print(job_section.find_all('li'))
 """
 # Keyword Arguments
 class_="jobs" -> class가 jobs인 section들을 모두 찾아
