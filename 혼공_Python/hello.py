@@ -28,3 +28,17 @@ print(sum_all(0, 100))
 print(sum_all(0, 1000))
 print(sum_all(50, 100))
 print(sum_all(50, 100))
+
+
+# list 함수의 key 키워드 매개변수
+books = [{
+    "제목" : "abc",
+    "가격" : 18000
+}, {
+    "제목" : "가나다",
+    "가격" : 3000
+}]
+
+books.sort(key=lambda book: book["가격"])
+for book in books:
+    print(book)
